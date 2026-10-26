@@ -1,3 +1,9 @@
 import { Routes } from '@angular/router';
+import { Login } from './login/login';
+import { Home } from './home/home';
+import { authGuard } from './auth-guard';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {path:'', component:Login},
+    {path:'Home',component:Home,canActivate:[authGuard]}
+];

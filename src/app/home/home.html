@@ -1,0 +1,14 @@
+<h1>products</h1>
+
+@for (product of products(); track product.id){
+  <div>
+    <p (click)="showdetail = product">{{product.title}}</p>
+
+    @if (showdetail=== product) {
+      <p> {{ product.price }}</p>
+      <img [src]="product.thumbnail">
+      <p>{{ product.id}}</p>
+    }
+  </div>
+
+}
